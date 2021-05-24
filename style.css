@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    
+}
+
+#snake{
+    border: 2px solid green;
+}
+
+body{
+    height: 100vh;
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    background-color:#ffff;       
+}
+
+.text-p{
+    position: absolute;
+    margin-top: 1rem;
+    margin-left: 0.3rem;
+    font-size: 20px;
+}
+
+.point{  
+    position: absolute;
+    margin-top: 0.4rem;
+    margin-left: 7rem;
+    font-size: 40px;
+}
+
+.title{
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: rgb(52, 165, 52);
+}
+
+.play-btn{    
+    position: absolute;
+    margin: 0;
+    margin-bottom: -5rem;
+    border: none;
+    padding: 1.0rem 3.0rem;
+    font-size: 16px;
+    background-color: rgb(52, 165, 52);
+    cursor: pointer;
+    transition: 0.80s;
+    color: #ffff;
+}
+
+.play-btn:hover{
+    background-color: #ffff;
+    color: rgb(52, 165, 52);      
+    transition: 0.50s;
+    padding: 1.0rem 4.0rem;
+}
+
