@@ -60,7 +60,7 @@ function theGame() {
             textp.style.display = 'none';
             point.style.display = 'none';
             gameOver.style.display = 'flex';
-            document.querySelector('.ypoint').innerHTML = point.innerHTML++;
+            document.querySelector('.ypoint').innerHTML = point.innerHTML;
         }
     }
 
