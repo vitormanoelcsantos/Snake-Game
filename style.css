@@ -1,9 +1,8 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    box-sizing: border-box;
-    
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;        
 }
 
 #snake{
@@ -25,19 +24,41 @@ body{
     margin-top: 1rem;
     margin-left: 0.3rem;
     font-size: 20px;
+    font-weight: bold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-260%, -890%);
 }
 
 .point{  
-    position: absolute;
-    margin-top: 0.4rem;
-    margin-left: 7rem;
+    position: absolute;    
     font-size: 40px;
+    font-weight: bold;
+    margin-top: 1rem;
+    margin-left: 0.3rem;
+    top: 7.3%;
+    left: 37.8%;    
 }
 
 .title{
+    position: absolute;
     text-align: center;
     margin-bottom: 1.5rem;
-    color: rgb(52, 165, 52);
+    color: rgb(52, 165, 52);    
+    top: 50%;
+    left: 50%;
+    transform: translate(-63%, -375%);
+    color: #ffff;
+    border: 2px solid #ffff;
+    border-radius: 25px;
+    padding: 0rem 1.3rem ;    
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .play-btn{    
@@ -51,12 +72,34 @@ body{
     cursor: pointer;
     transition: 0.80s;
     color: #ffff;
+    border-radius: 25px;
+    font-weight: bold;
 }
 
 .play-btn:hover{
     background-color: #ffff;
     color: rgb(52, 165, 52);      
     transition: 0.50s;
-    padding: 1.0rem 4.0rem;
+    padding: 1.0rem 5.0rem;
 }
 
+.ranking-btn{
+    position: absolute;
+    margin: 0;
+    margin-bottom: -15rem;
+    border: none;
+    padding: 1.0rem 2.2rem;
+    font-size: 16px;
+    background-color: #ffff;
+    cursor: pointer;
+    transition: 1.0s;
+    color: rgb(52, 165, 52);
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.ranking-btn:hover{
+    background-color: rgb(52, 165, 52);
+    color: #ffff;      
+    transition: 1.0s;    
+}
