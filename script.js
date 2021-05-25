@@ -6,19 +6,26 @@ let textp = document.querySelector('.text-p');
 let point = document.querySelector('.point');
 let title = document.querySelector('.title');
 let rankingButton = document.querySelector('.ranking-btn');
+let gameOver = document.querySelector('.gm');
 
 let snake = [];
 snake[0] = { x: 8 * box, y: 8 * box }
 
 let direction = "right";
+
 let food = {
     x: Math.floor(Math.random() * 15 + 1) * box,
     y: Math.floor(Math.random() * 15 + 1) * box
 }
+
 function createBackground() {
     context.fillStyle = "lightgreen";
     context.fillRect(0, 0, 16 * box, 16 * box);
+}
 
+function newCreateBackground() {
+    context.fillStyle = "lightgreen";
+    context.fillRect(0, 0, 16 * box, 16 * box);
 }
 
 function createSnake() {
@@ -50,8 +57,10 @@ function theGame() {
 
     for (i = 1; i < snake.length; i++) {
         if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
-            alert('Game over! Your pontuation is: ' + point.innerHTML);
-            window.location.reload('.index/html');
+            textp.style.display = 'none';
+            point.style.display = 'none';
+            gameOver.style.display = 'flex';
+            document.querySelector('.ypoint').innerHTML = point.innerHTML++;
         }
     }
 
@@ -88,12 +97,13 @@ function theGame() {
         y: snakeY
     }
     snake.unshift(newHead);
-
-
 }
 
 textp.style.display = 'none';
 point.style.display = 'none';
+gameOver.style.display = 'none';
+
+createBackground();
 
 function startTheGame() {
     setInterval(theGame, 100);
@@ -104,4 +114,6 @@ function startTheGame() {
     rankingButton.style.display = 'none';
 }
 
-createBackground();
+function restart() {
+    window.location.reload('.index/html');
+}
