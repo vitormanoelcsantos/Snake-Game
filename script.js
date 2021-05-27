@@ -8,6 +8,8 @@ let rankingButton = document.querySelector('.ranking-btn');
 let gameOver = document.querySelector('.gm');
 let game = document.querySelector('.game');
 let point = document.querySelector('.point');
+let ranking = document.querySelector('.ranking');
+
 
 let snake = [];
 snake[0] = { x: 8 * box, y: 8 * box }
@@ -99,12 +101,14 @@ createBackground();
 
 score.style.display = 'none'
 gameOver.style.display = 'none';
+ranking.style.display = 'none';
 
 function startTheGame() {
     setInterval(theGame, 100);
     score.style.display = 'flex';
     button.style.display = 'none';
     title.style.display = 'none';
+    ranking.style.display = 'none';
     rankingButton.style.display = 'none';
 }
 
@@ -112,3 +116,6 @@ function restart() {
     window.location.reload('.index/html');
 }
 
+function showRanking() {
+    ranking.style.display = 'flex';
+}
