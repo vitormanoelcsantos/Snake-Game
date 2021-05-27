@@ -2,7 +2,7 @@
 
 Images:
   - Inicial Screen: 
-  - ![](https://github.com/vitormanoelcsantos/Snake-Game-Images/blob/master/ngame.png)
+  - ![](https://github.com/vitormanoelcsantos/Snake-Game-Images/blob/master/nngame.png)
   - In game:
   - ![](https://github.com/vitormanoelcsantos/Snake-Game-Images/blob/master/nningame.png)
   - Score Screen:
