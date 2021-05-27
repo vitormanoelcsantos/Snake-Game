@@ -16,26 +16,32 @@
 
 <body>
     <div class="container">
-        <h1 class="title">Snake Game!</h1>
-        <p class="text-p">Score: </p>
-        <p class="point">0</p>
-        <canvas id="snake" width="512" height="512"></canvas>
-    </div>
-    <input type="button" value="Play!" class="play-btn" onclick="startTheGame()">
-    <input type="button" value="Ranking" class="ranking-btn">
-
-    <div class="gm">
-        <p class="game-over">Game Over!</p>
-        <input type="button" value="Back" class="back" onclick="restart()">
-        <div class="pontuation">
-            <p class="ypointt">
-                Your score:
-            </p>
-            <p class="ypoint">
-                0
-            </p>
+        <div class="score">
+            <p class="text-p">Score: </p>
+            <p class="point">0</p>
+        </div>
+        <div class="game">
+            <h1 class="title">Snake Game!</h1>
+            <canvas id="snake" width="512" height="512"></canvas>
+            <div class="buttons">
+                <input type="button" value="Play!" class="play-btn" onclick="startTheGame()">
+                <input type="button" value="Ranking" class="ranking-btn">
+            </div>
+        </div>
+        <div class="gm">
+            <p class="game-over">Game Over!</p>
+            <input type="button" value="Back" class="back" onclick="restart()">
+            <div class="pontuation">
+                <p class="ypointt">
+                    Your score:
+                </p>
+                <p class="ypoint">
+                    0
+                </p>
+            </div>
         </div>
     </div>
+
 </body>
 
 </html>

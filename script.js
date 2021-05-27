@@ -2,11 +2,12 @@ let canvas = document.getElementById("snake");
 let context = canvas.getContext("2d");
 let box = 32;
 let button = document.querySelector('.play-btn');
-let textp = document.querySelector('.text-p');
-let point = document.querySelector('.point');
+let score = document.querySelector('.score');
 let title = document.querySelector('.title');
 let rankingButton = document.querySelector('.ranking-btn');
 let gameOver = document.querySelector('.gm');
+let game = document.querySelector('.game');
+let point = document.querySelector('.point');
 
 let snake = [];
 snake[0] = { x: 8 * box, y: 8 * box }
@@ -19,11 +20,6 @@ let food = {
 }
 
 function createBackground() {
-    context.fillStyle = "lightgreen";
-    context.fillRect(0, 0, 16 * box, 16 * box);
-}
-
-function newCreateBackground() {
     context.fillStyle = "lightgreen";
     context.fillRect(0, 0, 16 * box, 16 * box);
 }
@@ -57,8 +53,8 @@ function theGame() {
 
     for (i = 1; i < snake.length; i++) {
         if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
-            textp.style.display = 'none';
-            point.style.display = 'none';
+            score.style.display = 'none';
+            game.style.display = 'none';
             gameOver.style.display = 'flex';
             document.querySelector('.ypoint').innerHTML = point.innerHTML;
         }
@@ -99,16 +95,14 @@ function theGame() {
     snake.unshift(newHead);
 }
 
-textp.style.display = 'none';
-point.style.display = 'none';
-gameOver.style.display = 'none';
-
 createBackground();
+
+score.style.display = 'none'
+gameOver.style.display = 'none';
 
 function startTheGame() {
     setInterval(theGame, 100);
-    textp.style.display = 'block';
-    point.style.display = 'block';
+    score.style.display = 'flex';
     button.style.display = 'none';
     title.style.display = 'none';
     rankingButton.style.display = 'none';
