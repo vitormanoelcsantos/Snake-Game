@@ -165,3 +165,9 @@ body{
     justify-content: center;
     
 }
+
+@media screen and (min-width: 940px) {
+    .container{
+        flex-direction: column;
+    }
+}

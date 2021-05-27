@@ -111,3 +111,4 @@ function startTheGame() {
 function restart() {
     window.location.reload('.index/html');
 }
+
