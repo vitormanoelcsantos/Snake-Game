@@ -5,7 +5,7 @@ Images:
   - ![](https://github.com/vitormanoelcsantos/Snake-Game-Images/blob/master/nngame.png)
   - In game:
   - ![](https://github.com/vitormanoelcsantos/Snake-Game-Images/blob/master/nningame.png)
-  - Score Screen:
+  - Game Over Screen:
   - ![](https://github.com/vitormanoelcsantos/Snake-Game-Images/blob/master/nnscore.png)
   - Ranking Screen:
   - ![](https://github.com/vitormanoelcsantos/Snake-Game-Images/blob/master/ranking.png)
