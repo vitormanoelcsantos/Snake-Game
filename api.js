@@ -28,8 +28,8 @@ async function resultC() {
 
 
 async function show() {
-    showRanking();
     resultC();
+    showRanking();
 }
 
 

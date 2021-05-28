@@ -117,5 +117,10 @@ function restart() {
 }
 
 function showRanking() {
-    ranking.style.display = 'flex';
+    if (ranking.style.display == 'none') {        
+        ranking.style.display = 'flex';
+    }
+    else {
+        ranking.style.display = 'none';
+    }
 }
