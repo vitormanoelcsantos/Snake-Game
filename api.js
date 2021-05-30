@@ -20,7 +20,7 @@ async function resultC() {
     }).then(function (data) {
         for (const index in data.results) {
             var li = document.createElement('li');
-            li.textContent = `${data.results[index].name} - ${data.results[index].height}`;
+            li.textContent = `${data.results[index].name} - ${data.results[index].mass}`;
             list.appendChild(li);
         }
     })
