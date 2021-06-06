@@ -13,18 +13,24 @@ async function result() {
     })
 }
 
+function compare(a, b) {
+    return b.mass - a.mass;
+}
 
 async function resultC() {
     await fetch("https://swapi.dev/api/people/", requestOptions).then(function (response) {
         return response.json();
     }).then(function (data) {
-        for (const index in data.results) {
+        const resultSort = data.results.sort(compare);
+        for (const index in resultSort) {
             var li = document.createElement('li');
-            li.textContent = `${data.results[index].name} - ${data.results[index].mass}`;
+            li.textContent = `${resultSort[index].name} - ${resultSort[index].mass}`;
             list.appendChild(li);
         }
     })
 }
+
+
 
 
 async function show() {

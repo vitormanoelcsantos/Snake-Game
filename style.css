@@ -168,8 +168,8 @@ body{
 
 .ranking{    
     margin-top: 0.1%;
-    height: 78.8%;    
-    width: 20%;
+    height: 30rem;    
+    width: 18rem;
     display: flex;    
     flex-direction: column;    
     margin-left: 55rem;    
