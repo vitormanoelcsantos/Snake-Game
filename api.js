@@ -5,18 +5,6 @@ var requestOptions = {
     redirect: 'follow'
 };
 
-async function result() {
-    await fetch("", requestOptions).then(function (response) {
-        return response.json();
-    }).then(function (data) {
-        alert(data);
-    })
-}
-
-function compare(a, b) {
-    return b.mass - a.mass;
-}
-
 async function resultC() {
     await fetch("https://swapi.dev/api/people/", requestOptions).then(function (response) {
         return response.json();
@@ -30,8 +18,9 @@ async function resultC() {
     })
 }
 
-
-
+function compare(a, b) {
+    return b.mass - a.mass;
+}
 
 async function show() {
     resultC();
