@@ -1,5 +1,8 @@
 # Snake-Game
 
+The game can be accessed through the link: [Snake Game](https://vitormanoelcsantos.github.io/Snake-Game/)
+
+#
 Images:
   - Inicial Screen: 
   - ![](https://github.com/vitormanoelcsantos/Snake-Game-Images/blob/master/nngame.png)
