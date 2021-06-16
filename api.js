@@ -2,25 +2,17 @@ let list = document.querySelector('.list');
 
 var requestOptions = {
     method: 'GET',
-    redirect: 'follow'
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    mode: 'cors',
+    cache: 'default'
 };
 
-async function result() {
-    await fetch("", requestOptions).then(function (response) {
-        return response.json();
-    }).then(function (data) {
-        alert(data);
-    })
-}
-
-function compare(a, b) {
-    return b.mass - a.mass;
-}
-
 async function resultC() {
-    await fetch("https://swapi.dev/api/people/", requestOptions).then(function (response) {
+    await fetch("https://api-rpg-game.herokuapp.com/tempscore", requestOptions).then((response) => {
         return response.json();
-    }).then(function (data) {
+    }).then((data) => {
         const resultSort = data.results.sort(compare);
         for (const index in resultSort) {
             var li = document.createElement('li');
@@ -30,8 +22,9 @@ async function resultC() {
     })
 }
 
-
-
+function compare(a, b) {
+    return b.mass - a.mass;
+}
 
 async function show() {
     resultC();
