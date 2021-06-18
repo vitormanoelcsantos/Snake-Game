@@ -1,13 +1,13 @@
 let list = document.querySelector('.list');
 
-var requestOptions = {
+var getOptions = {
     method: 'GET',
     mode: 'cors',
     cache: 'default'
 };
 
-async function resultC() {
-    await fetch("https://api-rpg-game.herokuapp.com/tempscore", requestOptions).then((response) => {
+async function getRanking() {
+    await fetch("https://api-rpg-game.herokuapp.com/tempscore", getOptions).then((response) => {
         return response.json();
     }).then((data) => {
         const resultSort = data.sort(compare);
@@ -26,7 +26,7 @@ function compare(a, b) {
 }
 
 async function show() {
-    resultC();
+    getRanking();
     showRanking();
 }
 

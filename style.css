@@ -15,7 +15,7 @@ body{
 
 .container{    
     height: 100vh;
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;    
@@ -115,7 +115,7 @@ body{
     align-items: center;
     flex-direction: column;      
     text-align: center;
-    height: 100%;
+    height: 100%;   
     width: 100%;       
 }
 
@@ -123,10 +123,9 @@ body{
     color: #1e272e;
     font-weight: bold;
     font-size: 40px;
-    padding: 0.5rem 1.3rem;
+    padding: 0rem 1.3rem;
     border-radius: 50px;
-    background: none;
-    
+    background: none;    
 }
 
 .back{
@@ -162,8 +161,7 @@ body{
     margin-top: 1rem;
     display: flex;
     align-items: center;
-    justify-content: center;
-    
+    justify-content: center;    
 }
 
 .ranking{    
@@ -180,8 +178,7 @@ body{
     text-align: center;
     border-bottom: 2px solid #1e272e;
 }
-.list-ranking{
-    
+.list-ranking{    
     margin-left: 0rem 10rem;
 }
 
@@ -208,3 +205,84 @@ body{
 .list li:nth-of-type(1n+11) {
     display: none;
 } 
+
+
+.btns{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column-reverse;
+}
+
+.submit{
+    margin: 1rem 1rem;
+    background-color: #1e272e;
+    color: white;
+    transition: 1s ease-in-out;
+}
+
+.submit:hover{
+    background-color: white;
+    color:#1e272e;
+}
+
+.send{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    background-color: white;    
+}
+
+.formsend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;       
+
+}
+
+.nickname{    
+    outline: none;    
+    border: none;   
+    text-align: center;
+    margin-bottom: 2rem;    
+    padding-bottom: 0.3rem;
+    color: black;
+    font-size: 20px;
+    font-weight: 900;
+    border-bottom: 1px solid grey; 
+}
+
+.nickname::placeholder{       
+    text-align: center;
+}
+
+.nickname:focus{
+    transition: 1s ease-in-out;  
+    border-bottom: 1px solid black;   
+}
+
+.nickname:focus::-webkit-input-placeholder{   
+    transition: 0.5s ease; 
+    color: transparent;     
+}
+
+.send-btn{
+    color: #1e272e;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 0rem 1.3rem;
+    background: none;
+    border: 2px solid #1e272e;
+    border-radius: 50px;
+    transition: 0.80s ease-in-out;   
+}
+
+.send-btn:hover{
+    background-color: #1e272e;
+    color: white;    
+    cursor: pointer;
+}

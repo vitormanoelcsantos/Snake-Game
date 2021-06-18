@@ -9,7 +9,10 @@ let gameOver = document.querySelector('.gm');
 let game = document.querySelector('.game');
 let point = document.querySelector('.point');
 let ranking = document.querySelector('.ranking');
-
+let send = document.querySelector('.send');
+let nickName = document.querySelector('.nickname');
+let sendButton = document.querySelector('.send-btn');
+let pontuation = document.querySelector('.ypoint');
 
 let snake = [];
 snake[0] = { x: 8 * box, y: 8 * box }
@@ -58,7 +61,7 @@ function theGame() {
             score.style.display = 'none';
             game.style.display = 'none';
             gameOver.style.display = 'flex';
-            document.querySelector('.ypoint').innerHTML = point.innerHTML;
+            pontuation.innerHTML = point.innerHTML;
         }
     }
 
@@ -99,9 +102,10 @@ function theGame() {
 
 createBackground();
 
-score.style.display = 'none'
+score.style.display = 'none';
 gameOver.style.display = 'none';
 ranking.style.display = 'none';
+send.style.display = 'none';
 
 function startTheGame() {
     setInterval(theGame, 100);
@@ -117,10 +121,39 @@ function restart() {
 }
 
 function showRanking() {
-    if (ranking.style.display == 'none') {        
+    if (ranking.style.display == 'none') {
         ranking.style.display = 'flex';
     }
     else {
         ranking.style.display = 'none';
     }
+}
+
+function showSubmit() {
+    send.style.display = 'flex';
+}
+
+
+function postRanking() {
+    send.addEventListener('submit', (e) => {
+
+        e.preventDefault();
+
+        fetch("https://api-rpg-game.herokuapp.com/tempscore", {
+            method: 'POST',
+            body: JSON.stringify({
+                nick: nickName.value,
+                score: pontuation.innerHTML
+            }),
+            headers: {
+                "Content-Type": "application/json; charset=UTF-8"
+            }
+        }).then((response) => {
+            return response.json();
+        }).then((data) => {
+            console.log(data);
+        })
+
+        restart();
+    })
 }
