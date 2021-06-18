@@ -133,7 +133,6 @@ function showSubmit() {
     send.style.display = 'flex';
 }
 
-
 function postRanking() {
     send.addEventListener('submit', (e) => {
 
@@ -147,7 +146,8 @@ function postRanking() {
             }),
             headers: {
                 "Content-Type": "application/json; charset=UTF-8"
-            }
+            },
+            redirect: 'follow'
         }).then((response) => {
             return response.json();
         }).then((data) => {
