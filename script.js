@@ -138,7 +138,7 @@ function postRanking() {
 
         e.preventDefault();
 
-        const response = await fetch("https://api-rpg-game.herokuapp.com/tempscore", {
+        await fetch("https://api-rpg-game.herokuapp.com/tempscore", {
             method: 'POST',
             body: JSON.stringify({
                 nick: nickName.value,
@@ -148,8 +148,6 @@ function postRanking() {
                 "Content-Type": "application/json; charset=UTF-8"
             }
         });
-
-        console.log(response);
 
         restart();
     })
