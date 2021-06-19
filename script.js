@@ -11,7 +11,6 @@ let point = document.querySelector('.point');
 let ranking = document.querySelector('.ranking');
 let send = document.querySelector('.send');
 let nickName = document.querySelector('.nickname');
-let sendButton = document.querySelector('.send-btn');
 let pontuation = document.querySelector('.ypoint');
 
 let snake = [];
@@ -134,11 +133,12 @@ function showSubmit() {
 }
 
 function postRanking() {
-    send.addEventListener('submit', (e) => {
+
+    send.addEventListener('submit', async (e) => {
 
         e.preventDefault();
 
-        fetch("https://api-rpg-game.herokuapp.com/tempscore", {
+        const response = await fetch("https://api-rpg-game.herokuapp.com/tempscore", {
             method: 'POST',
             body: JSON.stringify({
                 nick: nickName.value,
@@ -146,14 +146,13 @@ function postRanking() {
             }),
             headers: {
                 "Content-Type": "application/json; charset=UTF-8"
-            },
-            redirect: 'follow'
-        }).then((response) => {
-            return response.json();
-        }).then((data) => {
-            console.log(data);
-        })
+            }
+        });
+
+        console.log(response);
 
         restart();
     })
 }
+
+

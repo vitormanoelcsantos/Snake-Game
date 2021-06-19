@@ -216,6 +216,7 @@ body{
 
 .submit{
     margin: 1rem 1rem;
+    padding: 0.3rem 0.6rem;
     background-color: #1e272e;
     color: white;
     transition: 1s ease-in-out;
